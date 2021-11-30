@@ -23,7 +23,7 @@ namespace PathProtectionMiddleware
                 var isAuthorized = await authorizationService.AuthorizeAsync(context.User, null, _options.PolicyName);
                 if (!isAuthorized.Succeeded)
                 {
-                    await context.ChallengeAsync();
+                    await context.ChallengeAsync(_options.AuthenticationSchemeName);
                     return;
                 }
             }

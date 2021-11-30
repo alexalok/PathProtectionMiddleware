@@ -7,5 +7,7 @@ namespace PathProtectionMiddleware
         public PathString PathStartsWith { get; set; }
 
         public string PolicyName { get; set; } = null!;
+
+        public string AuthenticationSchemeName { get; set; } = null!;
     }
 }
