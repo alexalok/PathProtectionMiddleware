@@ -1,25 +1,30 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Authors>alexalok</Authors>
-    <Description>Protect resources in your ASP.NET Core application by their path (route).</Description>
-    <PackageProjectUrl>https://github.com/alexalok/PathProtectionMiddleware</PackageProjectUrl>
-    <Copyright>© 2021 Alex Alok</Copyright>
-    <RepositoryUrl>https://github.com/alexalok/PathProtectionMiddleware</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>asp.net core, authorization, path protection</PackageTags>
-  </PropertyGroup>
+	<PropertyGroup>
+		<Version>1.1.0</Version>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Authors>alexalok</Authors>
+		<Description>Protect resources in your ASP.NET Core application by their path (route).</Description>
+		<PackageProjectUrl>https://github.com/alexalok/PathProtectionMiddleware</PackageProjectUrl>
+		<Copyright>© 2021 Alex Alok</Copyright>
+		<RepositoryUrl>https://github.com/alexalok/PathProtectionMiddleware</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>asp.net core, authorization, path protection</PackageTags>
+		<PackageReleaseNotes>
+			* Added an ability to specify an auth scheme to challenge against
+			* Added a UsePathProtection accepting configure action
+		</PackageReleaseNotes>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
 
 </Project>
