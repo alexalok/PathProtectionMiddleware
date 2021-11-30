@@ -16,10 +16,11 @@ app.UseAuthorization();
 
 if (!env.IsDevelopment())
 {
-    app.UsePathProtection(new PathProtectionOptions
+    app.UsePathProtection(opt => 
     {
-        PathStartsWith = "/admin",
-        PolicyName = "Staff"
+        opt.PathStartsWith = "/admin"; // Mandatory
+        opt.PolicyName = "Staff"; // Mandatory
+        opt.AuthenticationSchemeName = CookieAuthenticationDefaults.AuthenticationScheme; // Optional
     });
 }
 
